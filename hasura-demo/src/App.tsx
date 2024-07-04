@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className="p-4 flex flex-col">
       <StockModal onClose={() => refetch()} />
-      <StockTable data={data?.message || []} loading={loading} />
+      <StockTable data={data?.stock || []} loading={loading} />
     </div>
   );
 };
