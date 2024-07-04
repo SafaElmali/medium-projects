@@ -1,0 +1,13 @@
+service: serverless-scheduled-event
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  deploymentMethod: direct
+
+functions: ${file(./functions.yml)}
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
