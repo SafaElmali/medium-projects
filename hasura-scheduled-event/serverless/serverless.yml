@@ -5,9 +5,14 @@ provider:
   name: aws
   runtime: nodejs18.x
   deploymentMethod: direct
+  environment:
+    HASURA_URL: ${.env:HASURA_URL}
+    HASURA_ADMIN_SECRET: ${.env:HASURA_ADMIN_SECRET}
+    SERVERLESS_URL: ${.env:SERVERLESS_URL}
 
 functions: ${file(./functions.yml)}
 
 plugins:
   - serverless-plugin-typescript
   - serverless-offline
+  - serverless-dotenv-plugin

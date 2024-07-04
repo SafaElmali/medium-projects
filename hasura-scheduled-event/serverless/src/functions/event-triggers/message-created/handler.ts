@@ -29,7 +29,7 @@ const mainFn = async (request: Request) => {
 
   await createScheduledEvent({
     comment: "Scheduled message sent",
-    webhook: process.env.SERVERLESS_URL as string,
+    webhook: `${process.env.SERVERLESS_URL}/scheduled-message-sent`,
     payload: {
       messageId: node.id,
     },
