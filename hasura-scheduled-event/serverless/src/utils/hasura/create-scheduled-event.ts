@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const HASURA_URL = process.env.HASURA_URL;
+const HASURA_QUERY_URL = process.env.HASURA_QUERY_URL;
 const HASURA_ADMIN_SECRET = process.env.HASURA_ADMIN_SECRET;
 
 type CreateScheduledEventArgs = {
@@ -27,7 +27,7 @@ const createScheduledEvent = async ({
   });
   const response = await axios({
     method: "post",
-    url: HASURA_URL,
+    url: HASURA_QUERY_URL,
     headers: {
       "Content-Type": "application/json",
       "x-hasura-admin-secret": HASURA_ADMIN_SECRET,

@@ -1,6 +1,6 @@
 import { GraphQLClient, Variables } from "graphql-request";
 
-export const client = new GraphQLClient(`${process.env.HASURA_URL}`);
+export const client = new GraphQLClient(`${process.env.HASURA_GRAPHQL_URL}`);
 
 export const requestAsAdmin = <T, V extends Variables = Variables>(
   document: string,
