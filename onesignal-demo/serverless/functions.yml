@@ -1,0 +1,12 @@
+scheduledMessageSent:
+  handler: src/functions/scheduled-event-triggers/scheduled-message-sent/handler.handle
+  events:
+    - httpApi:
+        path: /scheduled-message-sent
+        method: POST
+messageCreated:
+  handler: src/functions/event-triggers/message-created/handler.handle
+  events:
+    - httpApi:
+        path: /message-created
+        method: POST
