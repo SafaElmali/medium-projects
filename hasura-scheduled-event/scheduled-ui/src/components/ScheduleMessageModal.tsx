@@ -52,7 +52,7 @@ export const ScheduleMessageModal: React.FC<ScheduleMessageModalProps> = ({
       variables: {
         object: {
           text: data.text,
-          scheduled_at: new Date().toISOString(),
+          scheduled_at: data.scheduled_at,
           status: "scheduled",
         },
       },
