@@ -40,7 +40,11 @@ export const ScheduleMessageModal: React.FC<ScheduleMessageModalProps> = ({
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<Message>();
+  } = useForm<Message>({
+    defaultValues: {
+      scheduled_at: new Date(),
+    },
+  });
 
   const handleModalToggle = () => {
     setOpen(!open);
