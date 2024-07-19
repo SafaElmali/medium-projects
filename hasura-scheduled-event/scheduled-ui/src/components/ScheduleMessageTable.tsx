@@ -10,7 +10,7 @@ import { MdOutlineSchedule, MdCheck } from "react-icons/md";
 
 export type Message = {
   text: string;
-  scheduled_at: string;
+  scheduled_at: Date;
   status: string;
 };
 
